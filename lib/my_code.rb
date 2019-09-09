@@ -7,19 +7,3 @@ def map(array)
   end
   new
 end
-
-
-def reduce(array, sp=nil)
-  if sp
-    total = sp
-    i = 0
-  else
-    total = array[0]
-    i = 1
-  end
-  while i < array.length
-    total = yield(total, array[i])
-    i += 1
-  end
-  total
-end
